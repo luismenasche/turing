@@ -1,3 +1,3 @@
 # Turing
 
-Página web com material sobre Alan Turing
+Página web com material sobre Alan Turing.
