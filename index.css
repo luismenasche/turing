@@ -24,11 +24,12 @@ h2 {
 }
 
 hr {
+  margin-left: 0;
   width: 50%;
 }
 
-hr.esq {
-  margin-left: 0;
+hr.ctr {
+  margin-left: auto;
 }
 
 hr.tot {
