@@ -47,14 +47,14 @@
   color: darkkhaki;
 }
 
-a:link {
+.link:link {
   color: coral;
 }
 
-a:visited {
+.link:visited {
   color:lightcoral;
 }
 
-a:active, a:hover {
+.link:active, .link:hover {
   color: floralwhite;
 }
