@@ -3,6 +3,7 @@
 <html lang="pt-br">
 
 <head>
+
 <meta charset="utf-8">
 <meta name="author" content="Luis Menasché">
 <meta name="description" content="Página que reúne diversos conteúdos sobre Alan 
@@ -11,15 +12,36 @@ Turing. Organizada e mantida por Luis Menasché.">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Alan Turing (1912 - 1954) - Página Elaborada por Luis Menasché</title>
 <link rel="stylesheet" href="index.css">
+
+<script>
+  window.onload = () => {
+    const checkbox = document.getElementById("nav__checkbox");
+    const menu = document.getElementById("menu");
+    const uncheck = () => {
+      checkbox.checked = false;
+    }
+    let delay = 0;
+    let menuItems = menu.children;
+    for (let i of menuItems) {
+      i.style.transitionDelay = `${delay}s`;
+      delay += 0.1;
+      i.firstElementChild.onclick = uncheck;
+    }
+  }
+</script>
+
 </head>
 
 <body class="page">
 
 <nav class="nav">
 
-  <button class="nav__button">Menu</button>
+  <input class="nav__checkbox" type="checkbox" id="nav__checkbox">
+  <button class="nav__button">
+    <label class="nav__label" for="nav__checkbox">Menu</label>
+  </button>
 
-  <ul class="menu">
+  <ul class="menu" id="menu">
     <li class="menu__item"><a class="menu__link" href="#inicio">Início</a></li>
     <li class="menu__item">
       <a class="menu__link" href="#material">Materiais elaborados por mim</a>
@@ -49,20 +71,20 @@ Turing. Organizada e mantida por Luis Menasché.">
     
 <header class="header">
 
-<h1 class="title" id="inicio">Alan Turing</h1>
-<h2 class="dates">(1912-1954)</h2>
+<div class="header__frame">
 
-<hr class="hr">
+<img class="img-turing" src="TuringSorrindo.jpg" alt="Alan Turing" title="Alan Turing">
 
-<img class="img img--turing" src="TuringSorrindo.jpg" alt="Alan Turing" title="Alan Turing">
+<div class="title">
+  <h1 class="name" id="inicio">Alan Turing</h1>
+  <h2 class="dates">(1912-1954)</h2>
+</div>
 
-<hr class="hr">
+</div>
 
 <p class="page-author">Página organizada e mantida por <a class="link" href="https://luismenasche.github.io">Luis Menasché</a>
-<img class="img" src="email.jpg" alt="E-mail" title="E-mail">
+<img class="img-email" src="email.jpg" alt="E-mail" title="E-mail">
 </p>
-
-<hr class="hr">
 
 <a class="header__button" role="button" href="#main">&darr;</a>
 
