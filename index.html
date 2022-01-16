@@ -15,62 +15,64 @@ Turing. Organizada e mantida por Luis Menasché.">
 
 <body class="page">
 
-<header>
+<nav class="nav">
 
-<h1 class="title">Alan Turing</h1>
+  <button class="nav__button">Menu</button>
+
+  <ul class="menu">
+    <li class="menu__item"><a class="menu__link" href="#inicio">Início</a></li>
+    <li class="menu__item">
+      <a class="menu__link" href="#material">Materiais elaborados por mim</a>
+      <ul class="menu__dropdown">
+        <li class="menu__item"><a class="menu__link" href="#seminario">Seminário</a></li>
+        <li class="menu__item"><a class="menu__link" href="#resenha">Resenha para a revista "Ciência Hoje"</a></li>
+      </ul>
+    </li>
+    <li class="menu__item">
+      <a class="menu__link" href="#textos">Artigos e Livros</a>
+      <ul class="menu__dropdown">
+        <li class="menu__item"><a class="menu__link" href="#artigosde">Artigos <em>de</em> Turing</a></li>
+        <li class="menu__item"><a class="menu__link" href="#artigosso">Artigos <em>sobre</em> Turing</a></li>
+        <li class="menu__item"><a class="menu__link" href="#livrosbio">Livros <em>biográficos</em></a></li>
+        <li class="menu__item"><a class="menu__link" href="#livroscie">Livros <em>acadêmico-científicos</em></a></li>
+      </ul>
+    </li>
+    <li class="menu__item"><a class="menu__link" href="#filmes">Filmes</a></li>
+    <li class="menu__item"><a class="menu__link" href="#maq">Implementações da Máquina de Turing</a></li>
+    <li class="menu__item"><a class="menu__link" href="#locais">Locais da vida de Turing</a></li>
+    <li class="menu__item"><a class="menu__link" href="#legado">Legado de Turing</a></li>
+    <li class="menu__item"><a class="menu__link" href="#aty">Eventos do "Alan Turing Year"</a></li>
+    <li class="menu__item"><a class="menu__link" href="#outros">Outros materiais</a></li>
+  </ul>
+    
+</nav>
+    
+<header class="header">
+
+<h1 class="title" id="inicio">Alan Turing</h1>
 <h2 class="dates">(1912-1954)</h2>
 
-<hr class="hr hr--ctr"><br>
+<hr class="hr">
 
-<img class="img" src="TuringSorrindo.jpg" alt="Alan Turing" title="Alan Turing">
+<img class="img img--turing" src="TuringSorrindo.jpg" alt="Alan Turing" title="Alan Turing">
 
-<br><hr class="hr hr--ctr">
+<hr class="hr">
 
-<p class="page-author">Página organizada e mantida por <a class="link" href="https://luismenasche.github.io">Luis Menasché</a></p>
+<p class="page-author">Página organizada e mantida por <a class="link" href="https://luismenasche.github.io">Luis Menasché</a>
 <img class="img" src="email.jpg" alt="E-mail" title="E-mail">
+</p>
+
+<hr class="hr">
+
+<a class="header__button" role="button" href="#main">&darr;</a>
 
 </header>
 
-<br><hr class="hr hr--tot"><hr class="hr hr--tot">
+<main class="main" id="main">
 
-<nav>
+<section class="section">
 
-<h3>Índice</h3>
-
-<ol>
-  <li>
-    <a class="link" href="#material">Materiais</A> elaborados por mim:
-    <ol>
-      <li><a class="link" href="#seminario">Seminário</A> desenvolvido por mim</li>
-      <li><a class="link" href="#resenha">Resenha</A> escrita por mim para a revista "Ciência Hoje" de 03/2015 sobre Alan Turing e o filme "O Jogo da Imitação"</li>
-    </ol>
-  </li>
-  <li>
-    <a class="link" href="#textos">Artigos e Livros</A>:
-    <ol>
-      <li><a class="link" href="#artigosde">Artigos</A> escritos <span class="em">por</span> Alan Turing</li>
-      <li><a class="link" href="#artigosso">Artigos</A> escritos <span class="em">sobre</span> Alan Turing</li>
-      <li><a class="link" href="#livrosbio">Livros</A>  <span class="em">biográficos</span> sobre Alan Turing</li>
-      <li><a class="link" href="#livroscie">Livros</A> <span class="em">acadêmico-científicos</span> sobre Alan Turing</li>
-    </ol>
-  </li>
-  <li><a class="link" href="#filmes">Filmes</A> a respeito de Alan Turing (em ordem cronológica reversa)</li>
-  <li><a class="link" href="#maq">Implementações</A> da Máquina de Turing</li>
-  <li><a class="link" href="#locais">Locais</A> importantes na vida de Turing</li>
-  <li><a class="link" href="#legado">Legado</A> de Alan Turing</li>
-  <li><a class="link" href="#aty">Eventos</A> do "Alan Turing Year" (2012, centenário de nascimento de Alan Turing)</li>
-  <li><a class="link" href="#outros">Outros materiais</A> sobre Alan Turing</li>
-</ol>
-
-</nav>
-
-<hr class="hr hr--tot"><hr class="hr hr--tot">
-
-<main>
-
-<section>
-
-<h3 id="material">Materiais elaborados por mim</h3>
+<h3 class="section__title" id="material">Materiais elaborados por mim</h3>
 
 <ul>
 <li id="seminario">Seminário desenvolvido e apresentado por mim sobre a vida e as contribuições científicas de Alan Turing (apresentado na UFRJ, no IMPA e virtualmente):
@@ -85,11 +87,9 @@ Turing. Organizada e mantida por Luis Menasché.">
 
 </section>
 
-<hr class="hr">
+<section class="section">
 
-<section>
-
-<h3 id="textos">Artigos e livros</h3>
+<h3 class="section__title" id="textos">Artigos e livros</h3>
 
 <ol>
   <li id="artigosde">Artigos escritos <span class="em">por</span> Alan Turing:
@@ -175,11 +175,9 @@ Turing. Organizada e mantida por Luis Menasché.">
 
 </section>
 
-<hr class="hr">
+<section class="section">
 
-<section>
-
-<h3 id="filmes">Filmes a respeito de Alan Turing (em ordem cronológica reversa)</h3>
+<h3 class="section__title" id="filmes">Filmes a respeito de Alan Turing (em ordem cronológica reversa)</h3>
 
 <ol>
   <li id="jogo">"O Jogo da Imitação" ("The Imitation Game") (2014):
@@ -206,11 +204,9 @@ Turing. Organizada e mantida por Luis Menasché.">
 
 </section>
 
-<hr class="hr">
+<section class="section">
 
-<section>
-
-<h3 id="maq">Implementações da Máquina de Turing</h3>
+<h3 class="section__title" id="maq">Implementações da Máquina de Turing</h3>
 
 <ol>
   <li> <a class="link" href="http://aturingmachine.com">Implementação</A> feita com caneta e mata-borrão.</li>
@@ -219,10 +215,8 @@ Turing. Organizada e mantida por Luis Menasché.">
 </ol>
 
 </section>
-    
-<hr class="hr">
 
-<section>
+<section class="section">
 
   <h3 id="locais">Locais importantes na vida de Turing</h3>
 
@@ -234,11 +228,9 @@ Turing. Organizada e mantida por Luis Menasché.">
 
 </section>
 
-<hr class="hr">
+<section class="section">
 
-<section>
-
-<h3 id="legado">Legado de Alan Turing</h3>
+<h3 class="section__title" id="legado">Legado de Alan Turing</h3>
 
 <ol>
   <li>1966 (Homenagem): Criação do <a class="link" href="https://amturing.acm.org/">Prêmio Turing</A> pela ACM (concedido anualmente desde então)</li>
@@ -261,11 +253,9 @@ Turing. Organizada e mantida por Luis Menasché.">
 
 </section>
 
-<hr class="hr">
+<section class="section">
 
-<section>
-
-<h3 id="aty">Eventos do "Alan Turing Year" (2012, centenário de seu nascimento)</h3>
+<h3 class="section__title" id="aty">Eventos do "Alan Turing Year" (2012, centenário de seu nascimento)</h3>
 
 <ol>
   <li><a class="link" href="http://www.mathcomp.leeds.ac.uk/turing2012/">Site</A> do "Alan Turing Year"</li>
@@ -310,11 +300,9 @@ Turing. Organizada e mantida por Luis Menasché.">
 
 </section>
 
-<hr class="hr">
+<section class="section">
 
-<section>
-
-<h3 id="outros">Outros materiais sobre Alan Turing</h3>
+<h3 class="section__title" id="outros">Outros materiais sobre Alan Turing</h3>
 
 <ol>
   <li>Sites com materiais biográficos:
@@ -337,9 +325,7 @@ Turing. Organizada e mantida por Luis Menasché.">
 
 </main>
 
-<hr class="tot">
-
-<footer>
+<footer class="footer">
 
 <p>Última Atualização: 08 de Novembro de 2021</p>
 
