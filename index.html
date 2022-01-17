@@ -10,7 +10,12 @@
 Turing. Organizada e mantida por Luis Menasché.">
 <meta name="keywords" content="Turing, Alan Turing, Menasché, Luis Menasché">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Alan Turing (1912 - 1954) - Página Elaborada por Luis Menasché</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" 
+ integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+ crossorigin="anonymous" referrerpolicy="no-referrer">
 <link rel="stylesheet" href="index.css">
 
 <script>
@@ -20,11 +25,15 @@ Turing. Organizada e mantida por Luis Menasché.">
     const uncheck = () => {
       checkbox.checked = false;
     }
-    let delay = 0;
     let menuItems = menu.children;
-    for (let i of menuItems) {
+    let delay = 0;
+    let i;
+    for (i of menuItems) {
       i.style.transitionDelay = `${delay}s`;
       delay += 0.1;
+    }
+    menuItems = document.getElementsByClassName("menu__item");
+    for (i of menuItems) {
       i.firstElementChild.onclick = uncheck;
     }
   }
@@ -44,14 +53,18 @@ Turing. Organizada e mantida por Luis Menasché.">
   <ul class="menu" id="menu">
     <li class="menu__item"><a class="menu__link" href="#inicio">Início</a></li>
     <li class="menu__item">
-      <a class="menu__link" href="#material">Materiais elaborados por mim</a>
+      <a class="menu__link" href="#material"><i class="fas fa-arrow-left arrow"></i> 
+        Materiais elaborados por mim</a>
       <ul class="menu__dropdown">
         <li class="menu__item"><a class="menu__link" href="#seminario">Seminário</a></li>
-        <li class="menu__item"><a class="menu__link" href="#resenha">Resenha para a revista "Ciência Hoje"</a></li>
+        <li class="menu__item"><a class="menu__link" href="#resenha">
+          Resenha para a revista "Ciência Hoje"
+        </a></li>
       </ul>
     </li>
     <li class="menu__item">
-      <a class="menu__link" href="#textos">Artigos e Livros</a>
+      <a class="menu__link" href="#textos"><i class="fas fa-arrow-left arrow"></i>
+        Artigos e Livros</a>
       <ul class="menu__dropdown">
         <li class="menu__item"><a class="menu__link" href="#artigosde">Artigos <em>de</em> Turing</a></li>
         <li class="menu__item"><a class="menu__link" href="#artigosso">Artigos <em>sobre</em> Turing</a></li>
@@ -69,24 +82,24 @@ Turing. Organizada e mantida por Luis Menasché.">
     
 </nav>
     
-<header class="header">
+<header class="header" id="inicio">
 
 <div class="header__frame">
 
 <img class="img-turing" src="TuringSorrindo.jpg" alt="Alan Turing" title="Alan Turing">
 
 <div class="title">
-  <h1 class="name" id="inicio">Alan Turing</h1>
+  <h1 class="name">Alan Turing</h1>
   <h2 class="dates">(1912-1954)</h2>
 </div>
 
 </div>
 
-<p class="page-author">Página organizada e mantida por <a class="link" href="https://luismenasche.github.io">Luis Menasché</a>
-<img class="img-email" src="email.jpg" alt="E-mail" title="E-mail">
+<p class="page-author">
+  Página organizada e mantida por 
+  <a class="link" href="https://luismenasche.github.io">Luis Menasché</a>
+  <img class="img-email" src="email.jpg" alt="E-mail" title="E-mail">
 </p>
-
-<a class="header__button" role="button" href="#main">&darr;</a>
 
 </header>
 
@@ -97,14 +110,23 @@ Turing. Organizada e mantida por Luis Menasché.">
 <h3 class="section__title" id="material">Materiais elaborados por mim</h3>
 
 <ul>
-<li id="seminario">Seminário desenvolvido e apresentado por mim sobre a vida e as contribuições científicas de Alan Turing (apresentado na UFRJ, no IMPA e virtualmente):
+<li id="seminario">
+  Seminário desenvolvido e apresentado por mim sobre a vida e as contribuições científicas de 
+  Alan Turing (apresentado na UFRJ, no IMPA e virtualmente):
   <ul>
     <li><a class="link" href="Seminarios.pdf">Slides</A> do Seminário (atualizados em 11/2021)</li>
-    <li><a class="link" href="https://youtu.be/jHSv2k8lIdg">Vídeo</A> da apresentação realizada no Google Meet em 28/05/2020</li>
-    <li><a class="link" href="https://www.youtube.com/watch?v=t6PWG5a74eY">Vídeo</A> da apresentação realizada no IMPA em 24/02/2015</li>
+    <li><a class="link" href="https://youtu.be/jHSv2k8lIdg">Vídeo</A> 
+      da apresentação realizada no Google Meet em 28/05/2020
+    </li>
+    <li><a class="link" href="https://www.youtube.com/watch?v=t6PWG5a74eY">Vídeo</A> 
+      da apresentação realizada no IMPA em 24/02/2015
+    </li>
   </ul>
 </li>
-<li id="resenha"><a class="link" href="Critica_Ch323.pdf">Resenha</A> escrita por mim para a revista "Ciência Hoje" de 03/2015 sobre Alan Turing e o filme "O Jogo da Imitação"</li>
+<li id="resenha"><a class="link" href="Critica_Ch323.pdf">
+  Resenha</A> escrita por mim para a revista "Ciência Hoje" de 03/2015 sobre Alan Turing e o filme
+  "O Jogo da Imitação"
+</li>
 </ul>
 
 </section>
@@ -120,10 +142,21 @@ Turing. Organizada e mantida por Luis Menasché.">
         <a class="link" href="TuringMachines.pdf">"On Computable Numbers, with an Application to the Ent&shy;scheidungs&shy;pro&shy;blem" (1936)</a>
         <p>Artigo em que Turing apresenta quatro pontos fundamentais da Teoria da Computação:</p>
         <ol>
-          <li> Formalização de um "procedimento mecânico", ou um algoritmo, como uma tarefa que pode ser executada por uma Máquina de Turing.</li>
-          <li> Apresentação da Máquina de Turing Universal, uma Máquina de Turing capaz de simular o funcionamento de qualquer outra Máquina de Turing.</li>
-          <li> Prova de que existem problemas que não são algoritmicamente solúveis, mostrando que o Problema da Parada é um destes problemas.</li>
-          <li> Prova (no apêndice) de que o seu modelo de Máquinas de Turing é completamente equivalente ao modelo do Lambda-Cálculo de Church.</li>
+          <li>
+            Formalização de um "procedimento mecânico", ou um algoritmo, como uma tarefa que pode ser 
+            executada por uma Máquina de Turing.
+          </li>
+          <li> 
+            Apresentação da Máquina de Turing Universal, uma Máquina de Turing capaz de simular o 
+            funcionamento de qualquer outra Máquina de Turing.
+          </li>
+          <li> 
+            Prova de que existem problemas que não são algoritmicamente solúveis, mostrando que o Problema
+            da Parada é um destes problemas.
+          </li>
+          <li> Prova (no apêndice) de que o seu modelo de Máquinas de Turing é completamente equivalente
+             ao modelo do Lambda-Cálculo de Church.
+          </li>
         </ol>
       </li>
       <li> 
@@ -132,7 +165,10 @@ Turing. Organizada e mantida por Luis Menasché.">
       </li>
       <li> 
         <a class="link" href="BombeReport.pdf">"Visit to National Cash Register Corporation of Dayton, Ohio" (1942)</A>
-        <p>Relatório escrito por Turing sobre sua visita aos EUA para observar a construção de máquinas Bombe por parte dos americanos.</p>
+        <p>
+          Relatório escrito por Turing sobre sua visita aos EUA para observar a construção de máquinas 
+          Bombe por parte dos americanos.
+        </p>
       </li>
       <li> 
         <a class="link" href="LU.pdf">"Rounding-Off Errors in Matrix Processes" (1947)</A>
@@ -140,7 +176,11 @@ Turing. Organizada e mantida por Luis Menasché.">
       </li>
       <li> 
         <a class="link" href="FerrantiManual.pdf">Manual do Computador Ferranti Mark 1 (1950)</A>
-        <p>O Ferranti Mark 1 foi o primeiro computador disponível comercialmente e foi desenvolvido a partir do projeto da Universidade de Manchester. Este manual contém comentários e informações sobre o contexto histórico adicionados pelo autor da transcrição.</p>
+        <p>
+          O Ferranti Mark 1 foi o primeiro computador disponível comercialmente e foi desenvolvido a 
+          partir do projeto da Universidade de Manchester. Este manual contém comentários e informações
+          sobre o contexto histórico adicionados pelo autor da transcrição.
+        </p>
       </li>
       <li> 
         <a class="link" href="MachineIntelligence.pdf">"Computing Machinery and Intelligence" (1950)</A>
@@ -148,7 +188,9 @@ Turing. Organizada e mantida por Luis Menasché.">
       </li>
       <li> 
         <a class="link" href="Morphogenesis.pdf">"The Chemical Basis of Morphogenesis" (1952)</A>
-        <p>Artigo em que Turing apresenta o seu modelo de Equações Diferenciais Parciais (EDPs) para descrever a formação de padrões espaciais em tecidos biológicos.</p>
+        <p>
+          Artigo em que Turing apresenta o seu modelo de Equações Diferenciais Parciais (EDPs) para 
+          descrever a formação de padrões espaciais em tecidos biológicos.</p>
       </li>
     </ol>
   </li>
@@ -156,21 +198,47 @@ Turing. Organizada e mantida por Luis Menasché.">
     <ol>
       <li>Artigos de cunho geral:
         <ol>
-          <li> <a class="link" href="Incomputable.pdf">"The Incomputable Alan Turing"</A> - S. Barry Cooper (2004)</li>
-          <li> <a class="link" href="AMS-2012.pdf">"Incomputability after Alan Turing"</A> - S. Barry Cooper (2012)</li>
-          <li> <a class="link" href="hermann.pdf">"A Celebration of Alan Turing's Achievements in the Year of His Centenary"</A> - Edward Hermann Haeusler (2012)</li>
-          <li> <a class="link" href="http://cacm.acm.org/magazines/2012/9/154583-alan-and-i/fulltext">"Alan and I"</A> - Christos H. Papadimitriou (2012)</li>
+          <li> <a class="link" href="Incomputable.pdf">"The Incomputable Alan Turing"</A>
+             - S. Barry Cooper (2004)
+            </li>
+          <li> <a class="link" href="AMS-2012.pdf">"Incomputability after Alan Turing"</A>
+             - S. Barry Cooper (2012)
+          </li>
+          <li> <a class="link" href="hermann.pdf">"A Celebration of Alan Turing's Achievements in the
+            Year of His Centenary"</A> - Edward Hermann Haeusler (2012)
+          </li>
+          <li> <a class="link" href="http://cacm.acm.org/magazines/2012/9/154583-alan-and-i/fulltext">
+            "Alan and I"</A> - Christos H. Papadimitriou (2012)
+          </li>
         </ol>
       </li>
       <li>Artigos sobre o trabalho de Turing em morfogênese:
         <ol>
-          <li> <a class="link" href="swinton.pdf">"Watching the Daisies Grow: Turing and Fibonacci Phyllotaxis"</A> - Jonathan Swinton (2003)</li>
-          <li> <a class="link" href="172.pdf">"The Impact of Turing's Work on Pattern Formation in Biology"</A> - Philip K. Maini (2004)</li>
-          <li> <a class="link" href="221.pdf">"The Turing Model Comes of Molecular Age"</A> - Philip K. Maini, Ruth E. Baker e Cheng-Ming Chuong (2006)</li>
-          <li> <a class="link" href="http://www.wired.com/wiredscience/2011/02/turing-patterns/">"Alan Turing's Patterns in Nature, and Beyond"</A> - Brandon Keim (Revista Wired, 2011)</li>
-          <li> <a class="link" href="327.pdf">"Turing's Mathematical Theory of Morphogenesis"</A> - Philip K. Maini (2012)</li>
-          <li> <a class="link" href="http://www.sciencedaily.com/releases/2012/12/121214112652.htm">"Hox Genes Regulate Digit Patterning by Controlling the Wavelength of a Turing-Type Mechanism"</A> - R. Sheth, L. Marcon, M. F. Bastida, M. Junco, L. Quintana, R. Dahn, M. Kmita, J. Sharpe, M. A. Ros (2012)</li>
-          <li> <a class="link" href="http://www.sciencedaily.com/releases/2014/03/140310152158.htm">"Testing Turing’s theory of morphogenesis in chemical cells"</A> - Nathan Tompkins, Ning Li, Camille Girabawe, Michael Heymann, G. Bard Ermentrout, Irving R. Epstein, and Seth Fraden (2014)</li>
+          <li> <a class="link" href="swinton.pdf">"Watching the Daisies Grow: Turing and Fibonacci 
+            Phyllotaxis"</A> - Jonathan Swinton (2003)
+          </li>
+          <li> <a class="link" href="172.pdf">"The Impact of Turing's Work on Pattern Formation in 
+            Biology"</A> - Philip K. Maini (2004)
+          </li>
+          <li> <a class="link" href="221.pdf">"The Turing Model Comes of Molecular Age"</A> - Philip K. 
+            Maini, Ruth E. Baker e Cheng-Ming Chuong (2006)
+          </li>
+          <li> <a class="link" href="http://www.wired.com/wiredscience/2011/02/turing-patterns/">
+            "Alan Turing's Patterns in Nature, and Beyond"</A> - Brandon Keim (Revista Wired, 2011)
+          </li>
+          <li> <a class="link" href="327.pdf">"Turing's Mathematical Theory of Morphogenesis"</A> - 
+            Philip K. Maini (2012)
+          </li>
+          <li> <a class="link" href="http://www.sciencedaily.com/releases/2012/12/121214112652.htm">
+            "Hox Genes Regulate Digit Patterning by Controlling the Wavelength of a Turing-Type 
+            Mechanism"</A> - R. Sheth, L. Marcon, M. F. Bastida, M. Junco, L. Quintana, R. Dahn, 
+            M. Kmita, J. Sharpe, M. A. Ros (2012)
+          </li>
+          <li> <a class="link" href="http://www.sciencedaily.com/releases/2014/03/140310152158.htm">
+            "Testing Turing’s theory of morphogenesis in chemical cells"</A> - Nathan Tompkins, 
+            Ning Li, Camille Girabawe, Michael Heymann, G. Bard Ermentrout, Irving R. Epstein, and
+            Seth Fraden (2014)
+          </li>
         </ol>
       </li>
     </ol>
@@ -190,7 +258,9 @@ Turing. Organizada e mantida por Luis Menasché.">
       <li>"The Essential Turing: Seminal Writings", editado por B. Jack Copeland (2004).</li>
       <li>"The Annotated Turing", editado por Charles Petzold (2008)</li>
       <li>"Alan Turing: His Work and Impact", editado por S. Barry Cooper e J. van Leeuwen (2013).</li>
-      <li>"The Once and Future Turing: Computing the World", editado por S. Barry Cooper e Andrew Hodges (2016).</li>
+      <li>"The Once and Future Turing: Computing the World", editado por S. Barry Cooper e Andrew 
+        Hodges (2016).
+      </li>
     </ol>
   </li>
 </ol>
@@ -206,7 +276,11 @@ Turing. Organizada e mantida por Luis Menasché.">
     <ul>
       <li> Página no <a class="link" href="http://www.imdb.com/title/tt2084970/">IMDB</A> sobre o filme.</li>
       <li> <a class="link" href="https://www.youtube.com/watch?v=nuPZUUED5uk">Trailer</A> do filme.</li>
-      <li> <a class="link" href="http://www.telegraph.co.uk/culture/film/film-news/11229240/The-Imitation-Game-who-were-the-real-Bletchley-Park-codebreakers.html">Artigo</A> que descreve as pessoas reais que aparecem como personagens do filme.</li>
+      <li> 
+        <a class="link" 
+          href="http://www.telegraph.co.uk/culture/film/film-news/11229240/The-Imitation-Game-who-were-the-real-Bletchley-Park-codebreakers.html">
+          Artigo</A> que descreve as pessoas reais que aparecem como personagens do filme.
+        </li>
     </ul>
   </li>
   <li id="breaker">"Codebreaker" (2011):
@@ -243,9 +317,17 @@ Turing. Organizada e mantida por Luis Menasché.">
   <h3 id="locais">Locais importantes na vida de Turing</h3>
 
 <ol>
-  <li>1912 (Nascimento): <a class="link" href="http://www.colonnadehotel.co.uk/">Hotel</A> que funciona atualmente na casa onde nasceu Alan Turing (Endereço: 2 Warrington Crescent, Londres)</li>
-  <li>1926-1931 (Juventude): <a class="link" href="https://www.sherborne.org/about-sherborne/our-boys/alumni">Página</A> com a listagem de ex-alunos "famosos" da Sherborne School</li>
-  <li>1939-1945 (Trabalho com Criptografia): <a class="link" href="https://bletchleypark.org.uk/">Site</A> de Bletchley Park (atualmente transformado em museu)</li>
+  <li>1912 (Nascimento): <a class="link" href="http://www.colonnadehotel.co.uk/">Hotel</A> 
+    que funciona atualmente na casa onde nasceu Alan Turing (Endereço: 2 Warrington Crescent,
+    Londres)
+  </li>
+  <li>1926-1931 (Juventude): 
+    <a class="link" href="https://www.sherborne.org/about-sherborne/our-boys/alumni">Página</A> 
+    com a listagem de ex-alunos "famosos" da Sherborne School
+  </li>
+  <li>1939-1945 (Trabalho com Criptografia): <a class="link" href="https://bletchleypark.org.uk/">Site</A> 
+    de Bletchley Park (atualmente transformado em museu)
+  </li>
 </ol>
 
 </section>
@@ -255,22 +337,47 @@ Turing. Organizada e mantida por Luis Menasché.">
 <h3 class="section__title" id="legado">Legado de Alan Turing</h3>
 
 <ol>
-  <li>1966 (Homenagem): Criação do <a class="link" href="https://amturing.acm.org/">Prêmio Turing</A> pela ACM (concedido anualmente desde então)</li>
+  <li>1966 (Homenagem): Criação do <a class="link" href="https://amturing.acm.org/">Prêmio Turing</A>
+    pela ACM (concedido anualmente desde então)
+  </li>
   <li>1996 (Filme): <a class="link" href="#breaking">"Breaking the Code"</A></li>
   <li>2009-2017 (O Caminho até o Perdão):
     <ol>
-      <li>Pedido de desculpas público feito por Gordon Brown (então primeiro-ministro) em 2009 em nome do Governo Britânico pelo mau tratamento dado a Turing: <a class="link" href="brown1.png">página 1</A> e <a class="link" href="brown2.png">página 2</A></li>
-      <li><a class="link" href="pardon.pdf">Perdão Real</A> dado pela Rainha Elizabeth II a Alan Turing no Natal de 2013.</li>
-      <li><a class="link" href="turinglaw.pdf">Trecho</A> do "Policing and Crime Act 2017", sancionado pela Rainha Elizabeth II em 31 de janeiro de 2017, que contém a chamada "Alan Turing Law" estendendo perdão a todos os homens (em torno de 50 mil) condenados por crimes semelhantes ao atribuído a Turing.</li>
+      <li>Pedido de desculpas público feito por Gordon Brown (então primeiro-ministro) em 2009 em 
+        nome do Governo Britânico pelo mau tratamento dado a Turing: 
+        <a class="link" href="brown1.png">página 1</A> e 
+        <a class="link" href="brown2.png">página 2</A>
+      </li>
+      <li><a class="link" href="pardon.pdf">Perdão Real</A> dado pela Rainha Elizabeth II a Alan Turing 
+        no Natal de 2013.
+      </li>
+      <li><a class="link" href="turinglaw.pdf">Trecho</A> do "Policing and Crime Act 2017", 
+        sancionado pela Rainha Elizabeth II em 31 de janeiro de 2017, que contém a chamada "Alan 
+        Turing Law" estendendo perdão a todos os homens (em torno de 50 mil) condenados por crimes 
+        semelhantes ao atribuído a Turing.
+      </li>
     </ol>
   </li>
   <li>2011 (Filme): <a class="link" href="#breaker">"Codebreaker"</A></li>
   <li>2012 (Centenário de Nascimento): <a class="link" href="#aty">Eventos</A> do "Alan Turing Year"</li>
-  <li>2014 (Suíte Musical): <a class="link" href="https://www.petshopboys.co.uk/theatre-film/a-man-from-the-future#1">"A Man from the Future"</A> (Pet Shop Boys)</li>
+  <li>2014 (Suíte Musical): 
+    <a class="link" href="https://www.petshopboys.co.uk/theatre-film/a-man-from-the-future#1">
+    "A Man from the Future"</A> (Pet Shop Boys)
+  </li>
   <li>2014 (Filme): <a class="link" href="#jogo">"O Jogo da Imitação"</A> ("The Imitation Game")</li>
-  <li>2019 (Homenagem): <a class="link" href="https://www.bankofengland.co.uk/banknotes/polymer-50-pound-note">Cédula</A> de 50 libras homenageando Turing (anunciada em 2019 e colocada em circulação em 23/06/2021, aniversário de Turing)</li>
-  <li>2021 (Homenagem): <a class="link" href="https://www.gchq.gov.uk/information/turing-challenge">Coletânea</A> de desafios de decifragem em celebração à cédula com Turing disponibilizada pelo GCHQ, sucessor contemporâneo do serviço de inteligência onde Turing trabalhou durante a Segunda Guerra</li>
-  <li>2021 (Homenagem): <a class="link" href="https://www.gchq.gov.uk/news/turing-artwork">Obra de arte</A> inaugurada na sede do GCHQ</li>
+  <li>2019 (Homenagem): 
+    <a class="link" href="https://www.bankofengland.co.uk/banknotes/polymer-50-pound-note">Cédula</A>
+    de 50 libras homenageando Turing (anunciada em 2019 e colocada em circulação em 23/06/2021, 
+    aniversário de Turing)
+  </li>
+  <li>2021 (Homenagem): 
+    <a class="link" href="https://www.gchq.gov.uk/information/turing-challenge">Coletânea</A> de 
+    desafios de decifragem em celebração à cédula com Turing disponibilizada pelo GCHQ, sucessor 
+    contemporâneo do serviço de inteligência onde Turing trabalhou durante a Segunda Guerra
+  </li>
+  <li>2021 (Homenagem): <a class="link" href="https://www.gchq.gov.uk/news/turing-artwork">Obra de 
+    arte</A> inaugurada na sede do GCHQ
+  </li>
 </ol>
 
 </section>
@@ -281,40 +388,67 @@ Turing. Organizada e mantida por Luis Menasché.">
 
 <ol>
   <li><a class="link" href="http://www.mathcomp.leeds.ac.uk/turing2012/">Site</A> do "Alan Turing Year"</li>
-  <li><a class="link" href="http://cie2012.eu/">Site</A> da "Turing Centenary Conference" na Universidade de Cambridge</li>
+  <li><a class="link" href="http://cie2012.eu/">Site</A> da "Turing Centenary Conference" na 
+    Universidade de Cambridge
+  </li>
   <li>"Turing Centenary Conference" na Universidade de Manchester:
     <ol>
-      <li><a class="link" href="http://curation.cs.manchester.ac.uk/Turing100/www.turing100.manchester.ac.uk/?man=true">Site</A></li>
-      <li><a class="link" href="http://videolectures.net/turing100_conference2012_manchester/">Gravação</A> das palestras apresentadas</li>
+      <li>
+        <a class="link" href="http://curation.cs.manchester.ac.uk/Turing100/www.turing100.manchester.ac.uk/?man=true">
+        Site</A>
+      </li>
+      <li><a class="link" href="http://videolectures.net/turing100_conference2012_manchester/">
+        Gravação</A> das palestras apresentadas
+      </li>
     </ol>
   </li>
   <li>"Turing Centenary Celebration" da ACM:
     <ol>
       <li><a class="link" href="http://turing100.acm.org/">Site</A></li>
-      <li><a class="link" href="http://turing100.acm.org/index.cfm?p=webcast">Gravação</A> das palestras apresentadas</li>
+      <li><a class="link" href="http://turing100.acm.org/index.cfm?p=webcast">Gravação</A> das 
+        palestras apresentadas
+      </li>
     </ol>
   </li>
-  <li><a class="link" href="http://www.ucalgary.ca/turing/">Site</A> do "Alan Turing Centenary" na Universidade de Calgary</li>
-  <li><a class="link" href="http://www.podcasts.ox.ac.uk/series/alan-turing-centenary-lectures">Site</A> do "Alan Turing: Centenary Lectures" na Universidade de Oxford</li>
+  <li><a class="link" href="http://www.ucalgary.ca/turing/">Site</A> do "Alan Turing Centenary" na 
+    Universidade de Calgary
+  </li>
+  <li><a class="link" href="http://www.podcasts.ox.ac.uk/series/alan-turing-centenary-lectures">
+    Site</A> do "Alan Turing: Centenary Lectures" na Universidade de Oxford
+  </li>
   <li>Vídeos produzidos pelo CNRS francês pela ocasião do centenário de Turing:
     <ol>
       <li><a class="link" href="https://images.cnrs.fr/video/2975">Alan Turing</A></li>
       <li><a class="link" href="https://images.cnrs.fr/video/3001">Máquina de Turing</A></li>
     </ol>
   </li>
-  <li><a class="link" href="https://www.sciencemuseum.org.uk/what-was-on/codebreaker">Exposição</A> sobre Turing no Science Museum de Londres</li>
+  <li><a class="link" href="https://www.sciencemuseum.org.uk/what-was-on/codebreaker">Exposição</A>
+    sobre Turing no Science Museum de Londres
+  </li>
   <li>Série de cinco artigos encomendados pela BBC sobre a vida e obra de Alan Turing por ocasião do seu centenário:
     <ol>
-      <li><a class="link" href="http://www.bbc.com/news/technology-17662585">Artigo de Vint Cerf</A> (ganhador do Prêmio Turing)</li>
-      <li><a class="link" href="http://www.bbc.com/news/technology-18419691">Artigo de Jack Copeland</A> (biógrafo de Turing)</li>
-      <li><a class="link" href="http://www.bbc.com/news/technology-18327261">Artigo de Simon Lavington</A> (historiador da computação)</li>
-      <li><a class="link" href="http://www.bbc.com/news/technology-18475646">Artigo de Noel Sharkey</A> (pesquisador de inteligência artificial)</li>
-      <li><a class="link" href="http://www.bbc.com/news/technology-18350956">Artigo de Andrew Hodges</A> (biógrafo de Turing)</li>
+      <li><a class="link" href="http://www.bbc.com/news/technology-17662585">Artigo de Vint Cerf</A> 
+        (ganhador do Prêmio Turing)
+      </li>
+      <li><a class="link" href="http://www.bbc.com/news/technology-18419691">Artigo de Jack Copeland</A> 
+        (biógrafo de Turing)
+      </li>
+      <li><a class="link" href="http://www.bbc.com/news/technology-18327261">Artigo de Simon Lavington</A> 
+        (historiador da computação)
+      </li>
+      <li><a class="link" href="http://www.bbc.com/news/technology-18475646">Artigo de Noel Sharkey</A> 
+        (pesquisador de inteligência artificial)
+      </li>
+      <li><a class="link" href="http://www.bbc.com/news/technology-18350956">Artigo de Andrew Hodges</A> 
+        (biógrafo de Turing)
+      </li>
     </ol>
   </li>
   <li>Doodle do Google em homenagem ao centenário de Turing (uma Máquina de Turing):
     <ol>
-      <li><a class="link" href="http://www.google.com/doodles/alan-turings-100th-birthday">Visualização</A></li>
+      <li><a class="link" href="http://www.google.com/doodles/alan-turings-100th-birthday">
+        Visualização</A>
+      </li>
       <li><a class="link" href="https://github.com/google/turing-doodle">Código fonte</A> (JavaScript)</li>
     </ol>
   </li>
@@ -329,15 +463,26 @@ Turing. Organizada e mantida por Luis Menasché.">
 <ol>
   <li>Sites com materiais biográficos:
     <ol>
-      <li><a class="link" href="http://www.turing.org.uk/turing">Site</A> com muitas informações sobre Turing mantido pelo Professor Andrew Hodges, autor da biografia "Alan Turing: the Enigma"</li>
-      <li><a class="link" href="http://www.turingarchive.org/">Arquivo</A> digital com cartas, manuscritos, fotos e outros documentos relacionados à vida de Turing</li>
-      <li><a class="link" href="http://www.alanturing.net/">Outro arquivo</A> digital com muitas informações sobre Turing e suas diversas contribuições</li>
-      <li><a class="link" href="http://openplaques.org/people/368">Placas Públicas</A> em Memória de Turing</li>
+      <li><a class="link" href="http://www.turing.org.uk/turing">Site</A> com muitas informações 
+        sobre Turing mantido pelo Professor Andrew Hodges, autor da biografia "Alan Turing: the 
+        Enigma"
+      </li>
+      <li><a class="link" href="http://www.turingarchive.org/">Arquivo</A> digital com cartas, 
+        manuscritos, fotos e outros documentos relacionados à vida de Turing
+      </li>
+      <li><a class="link" href="http://www.alanturing.net/">Outro arquivo</A> digital com muitas 
+        informações sobre Turing e suas diversas contribuições
+      </li>
+      <li><a class="link" href="http://openplaques.org/people/368">Placas Públicas</A> em Memória de
+        Turing
+      </li>
     </ol>
   </li>
   <li>Enciclopédias:
     <ol>
-      <li><a class="link" href="http://plato.stanford.edu/entries/turing">Turing</A> na "Stanford Encyclopedia of Philosophy"</li>
+      <li><a class="link" href="http://plato.stanford.edu/entries/turing">Turing</A> na "Stanford 
+        Encyclopedia of Philosophy"
+      </li>
       <li><a class="link" href="http://en.wikipedia.org/wiki/Alan_Turing">Turing</A> na Wikipedia</li>
     </ol>
   </li>
