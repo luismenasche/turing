@@ -13,30 +13,28 @@ Turing. Organizada e mantida por Luis Menasché.">
 
 <title>Alan Turing (1912 - 1954) - Página Elaborada por Luis Menasché</title>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" 
- integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
- crossorigin="anonymous" referrerpolicy="no-referrer">
-<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="style.css">
 
 <script>
-  window.onload = () => {
+  function setMenu() {
     const checkbox = document.getElementById("nav__checkbox");
-    const menu = document.getElementById("menu");
-    const uncheck = () => {
+    
+    function close(ev) {
       checkbox.checked = false;
     }
-    let menuItems = menu.children;
+
+    window.addEventListener("scroll", close);
+
+    const menu = document.getElementById("menu");
+    const menuItems = menu.children;
     let delay = 0;
-    let i;
-    for (i of menuItems) {
+    for (let i of menuItems) {
       i.style.transitionDelay = `${delay}s`;
       delay += 0.1;
     }
-    menuItems = document.getElementsByClassName("menu__item");
-    for (i of menuItems) {
-      i.firstElementChild.onclick = uncheck;
-    }
   }
+
+  window.addEventListener("load", setMenu);
 </script>
 
 </head>
@@ -51,19 +49,27 @@ Turing. Organizada e mantida por Luis Menasché.">
   </button>
 
   <ul class="menu" id="menu">
-    <li class="menu__item"><a class="menu__link" href="#inicio">Início</a></li>
     <li class="menu__item">
-      <i class="fas fa-arrow-down arrow"></i> Língua / Language
+      <a class="menu__link" href="#inicio">Início</a>
+    </li>
+    <li class="menu__item">
+      <span class="arrow">&#x21E9;</span> Língua / Language
       <ul class="menu__dropdown">
-        <li class="menu__item">Português <i class="flag flag-br"></i> / 
-          <i class="flag flag-pt"></i></li>
-        <li class="menu__item"><a class="menu__link" href="index_en.html">English 
-          <i class="flag flag-us"></i> / <i class="flag flag-uk"></i></a></li>
+        <li class="menu__item">Português 
+          <span class="flag">&#x1f1e7;&#x1f1f7;</span> / 
+          <span class="flag">&#x1f1f5;&#x1f1f9;</span>
+        </li>
+        <li class="menu__item"><a class="menu__link" href="index_en.html">
+          English 
+          <span class="flag">&#x1f1fa;&#x1f1f8;</span> / 
+          <span class="flag">&#x1f1ec;&#x1f1e7;</span>
+        </a></li>
       </ul>
     </li>
     <li class="menu__item">
-      <a class="menu__link" href="#material"><i class="fas fa-arrow-down arrow"></i> 
-        Meus materiais</a>
+      <a class="menu__link" href="#material">
+        <span class="arrow">&#x21E9;</span> Meus materiais
+      </a>
       <ul class="menu__dropdown">
         <li class="menu__item"><a class="menu__link" href="#seminario">Seminário</a></li>
         <li class="menu__item"><a class="menu__link" href="#resenha">
@@ -73,8 +79,9 @@ Turing. Organizada e mantida por Luis Menasché.">
       </ul>
     </li>
     <li class="menu__item">
-      <a class="menu__link" href="#textos"><i class="fas fa-arrow-down arrow"></i>
-        Artigos e Livros</a>
+      <a class="menu__link" href="#textos">
+        <span class="arrow">&#x21E9;</span> Artigos e Livros
+      </a>
       <ul class="menu__dropdown">
         <li class="menu__item"><a class="menu__link" href="#artigosde">Artigos <em>de</em> Turing</a></li>
         <li class="menu__item"><a class="menu__link" href="#artigosso">Artigos <em>sobre</em> Turing</a></li>
@@ -504,7 +511,7 @@ Turing. Organizada e mantida por Luis Menasché.">
 
 <footer class="footer">
 
-<p>Última Atualização: 08 de Novembro de 2021</p>
+<p>Última Atualização: 15 de Março de 2022</p>
 
 </footer>
 
