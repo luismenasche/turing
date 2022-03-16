@@ -211,7 +211,9 @@
 .img-turing {
   border-radius: 20px;
   display: block;
+  height: 260px;
   max-width: 100%;
+  width: 237px;
 }
 
 .title {
@@ -239,8 +241,10 @@
 
 .img-email {
   display: block;
+  height: 36px;
   margin: 0 auto;
   max-width: 70%;
+  width: 480px;
 }
 
 .section {
@@ -298,12 +302,16 @@
     flex-direction: column;
   }
 
+  .img-turing {
+    align-self: center;
+  }
+
   .menu__item {
     top: 44px;
   }
 }
 
-@media screen and (max-height: 600px) {
+@media screen and (max-height: 560px) {
   .nav__button {
     font-size: 1rem;
   }
@@ -325,7 +333,7 @@
   }
 }
 
-@media screen and (max-height: 420px) {
+@media screen and (max-height: 430px) {
   .nav__button {
     font-size: 0.8rem;
   }

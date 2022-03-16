@@ -14,28 +14,7 @@ Turing. Organizada e mantida por Luis Menasché.">
 <title>Alan Turing (1912 - 1954) - Página Elaborada por Luis Menasché</title>
 
 <link rel="stylesheet" href="style.css">
-
-<script>
-  function setMenu() {
-    const checkbox = document.getElementById("nav__checkbox");
-    
-    function close(ev) {
-      checkbox.checked = false;
-    }
-
-    window.addEventListener("scroll", close);
-
-    const menu = document.getElementById("menu");
-    const menuItems = menu.children;
-    let delay = 0;
-    for (let i of menuItems) {
-      i.style.transitionDelay = `${delay}s`;
-      delay += 0.1;
-    }
-  }
-
-  window.addEventListener("load", setMenu);
-</script>
+<script src="script.js" defer></script>
 
 </head>
 
@@ -103,7 +82,7 @@ Turing. Organizada e mantida por Luis Menasché.">
 
 <div class="header__frame">
 
-<img class="img-turing" src="TuringSorrindo.jpg" alt="Alan Turing" title="Alan Turing">
+<img class="img-turing" src="TuringSorrindo.jpg" alt="Foto de Alan Turing" title="Alan Turing">
 
 <div class="title">
   <h1 class="name">Alan Turing</h1>
@@ -115,7 +94,7 @@ Turing. Organizada e mantida por Luis Menasché.">
 <p class="page-author">
   Página organizada e mantida por 
   <a class="link" href="https://luismenasche.github.io">Luis Menasché</a>
-  <img class="img-email" src="email.jpg" alt="E-mail" title="E-mail">
+  <img class="img-email" src="email.jpg" alt="Meu endereço de E-mail" title="E-mail">
 </p>
 
 </header>
