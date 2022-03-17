@@ -211,7 +211,7 @@
 .img-turing {
   border-radius: 20px;
   display: block;
-  height: 260px;
+  height: auto;
   max-width: 100%;
   width: 237px;
 }
@@ -241,7 +241,7 @@
 
 .img-email {
   display: block;
-  height: 36px;
+  height: auto;
   margin: 0 auto;
   max-width: 70%;
   width: 480px;
@@ -308,6 +308,37 @@
 
   .menu__item {
     top: 44px;
+  }
+
+  .header__frame {
+    margin: 10px auto;
+  }
+
+  .section {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .footer {
+    margin-bottom: 10px;
+    padding: 0 25px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header__frame {
+    margin: 5px auto;
+  }
+
+  .section {
+    border-width: 3px;
+    margin: 5px;
+    padding: 5px;
+  }
+
+  .footer {
+    margin-bottom: 5px;
+    padding: 0 13px;
   }
 }
 
