@@ -42,6 +42,8 @@
   color: white;
   font-size: 2rem;
   font-weight: bold;
+  line-height: 1;
+  padding: 5px;
   position: absolute;
   right: 0;
   top: 0;
@@ -50,22 +52,12 @@
 
 .nav__button:hover {
   background-color: var(--gray-2);
+  padding: 10px;
 }
 
 .nav__checkbox:checked ~ .nav__button {
   background-color: white;
   color: black;
-}
-
-.nav__label {
-  display: block;
-  height: 100%;
-  padding: 5px;
-  transition: 0.4s;
-}
-
-.nav__button:hover .nav__label {
-  padding: 10px;
 }
 
 .menu, .menu__dropdown {
@@ -367,13 +359,10 @@
 @media screen and (max-height: 430px) {
   .nav__button {
     font-size: 0.8rem;
-  }
-
-  .nav__label {
     padding: 3px;
   }
-  
-  .nav__button:hover .nav__label {
+ 
+  .nav__button:hover {
     padding: 5px;
   }
 
