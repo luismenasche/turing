@@ -253,6 +253,14 @@
   margin-bottom: 10px;
 }
 
+.disclaimer {
+  border: 3px double white;
+  margin: 10px auto;
+  padding: 0 5px;
+  text-align: center;
+  width: fit-content;
+}
+
 .topic {
   margin-left: 25px;
 }
