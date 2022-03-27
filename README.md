@@ -21,4 +21,4 @@ https://luismenasche.github.io/turing/
 
 ## Live Webpage in English
 
-https://luismenasche.github.io/turing/index_en.html
+https://luismenasche.github.io/turing/en/
