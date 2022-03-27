@@ -48,7 +48,7 @@
   padding: 10px;
 }
 
-.nav.open .nav__button {
+.open .nav__button {
   background-color: white;
   color: black;
 }
@@ -78,7 +78,7 @@
   background-color: var(--gray-2);
 }
 
-.nav.open .menu__item {
+.open .menu__item {
   right: 0;
 }
 
