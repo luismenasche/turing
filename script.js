@@ -13,4 +13,8 @@ menuButton.addEventListener("click", () => {
 });
 window.addEventListener("scroll", () => {
     nav.classList.remove("open");
+    nav.scrollTo(0, 0);
+});
+nav.addEventListener("scroll", ev => {
+    ev.stopPropagation();
 });
