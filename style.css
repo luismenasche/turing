@@ -66,6 +66,7 @@
 
 .menu__item {
   border: 2px solid white;
+  cursor: default;
   font-size: 1rem;
   margin: 10px 0;
   padding-right: 15px;
@@ -94,7 +95,23 @@
   opacity: 0;
 }
 
-.menu__item:hover .menu__dropdown {
+.menu__item .up {
+  display: block;
+}
+
+.menu__item .down {
+  display: none;
+}
+
+.dropdown .up {
+  display: none;
+}
+
+.dropdown .down {
+  display: block;
+}
+
+.dropdown .menu__dropdown {
   animation: fade-in 0.6s forwards;
   display: block;
   opacity: 1;
@@ -171,13 +188,13 @@
   }
 }
 
-.menu__item:hover .arrow {
-  visibility: hidden;
-}
-
 .flag {
   font-size: 1.3em;
   font-style: normal;
+}
+
+.dropdown-text {
+  width: 100%;
 }
 
 .menu__link {
@@ -187,7 +204,7 @@
   width: 100%;
 }
 
-.menu__link:hover {
+.menu__link:hover, .dropdown-text:hover {
   text-decoration: underline;
 }
 
