@@ -322,18 +322,22 @@
 
 .em {
   color: var(--color-em);
+  transition: 0.3s;
 }
 
 .link:link {
   color: var(--color-link);
+  transition: 0.3s;
 }
 
 .link:visited {
   color: var(--color-visited);
+  transition: 0.3s;
 }
 
 .link:active, .link:hover {
   color: var(--color-hover);
+  transition: 0.3s;
 }
 
 .footer {

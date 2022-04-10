@@ -3,7 +3,6 @@ const menuButton = document.getElementById("nav__button");
 const menuItems = Array.from(document.getElementById("menu").children);
 const dropDowns = menuItems.filter(i => i.classList.contains("has-dropdown"));
 const theme = document.getElementById("theme");
-const themeArray = ["dark", "light"];
 let delay = 0;
 let t = 0;
 
@@ -13,6 +12,10 @@ function closeMenu() {
     nav.scrollTo(0, 0);
 }
 
+if (localStorage.getItem("theme") == "light") {
+    document.body.classList.add("page--light");
+    t = 1;
+}
 menuItems.forEach(i => {
     i.style.transitionDelay = `${delay}s`;
     delay += 0.1;
@@ -39,14 +42,8 @@ theme.addEventListener("click", ev => {
     t = (t + 1) % 2;
     ev.stopPropagation();
 });
-window.addEventListener("load", () => {
-    const x = localStorage.getItem("theme");
-    if (x == "light") {
-        document.body.classList.add("page--light");
-        t = 1;
-    }
-});
 window.addEventListener("click", closeMenu);
 window.addEventListener("beforeunload", () => {
+    const themeArray = ["dark", "light"];
     localStorage.setItem("theme", themeArray[t]);
 });
